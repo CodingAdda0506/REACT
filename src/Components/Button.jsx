@@ -1,10 +1,10 @@
 import React from 'react';
+import './Button.css';
 
-// Passing props from parent to child
-const Button = ({ title, description }) => {
+const Button = () => {
   return (
     <div>
-      <h1>Button</h1>
+      <h1 className='btn'>Button</h1>
     </div>
   )
 }
