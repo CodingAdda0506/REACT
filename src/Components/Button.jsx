@@ -1,23 +1,12 @@
-// import React from 'react'
+import React from 'react';
 
-// const Button = () => {
-//   return (
-//     <div>
-//         <h1>Button</h1>
-//     </div>
-//   )
-// }
-
-// export default Button;
-
-import React, { Component } from 'react'
-
-export default class Button extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Button</h1>
-      </div>
-    )
-  }
+// Passing props from parent to child
+const Button = ({ title, description }) => {
+  return (
+    <div>
+      <h1>Button</h1>
+    </div>
+  )
 }
+
+export default Button;
