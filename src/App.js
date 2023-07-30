@@ -1,30 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 const App = () => {
 
-  const [text, setText] = useState("");
-  const [number, setNumber] = useState(0);
-  const [bool, setBool] = useState(true);
-  const [arr, setArr] = useState([]);
+  const[state, setState] = useState()
 
-  const handleSubmit = () => {
-    console.log(text);
-    console.log(number);
-    bool ? setBool(false) : setBool(true);
-    console.log(bool);
-    arr.push(text);
-    console.log(arr);
-  }
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+  });
 
+  // Render the fetched data
   return (
-    <div>App
-      <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
-      <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} />
-      <button type="submit" onClick={() => handleSubmit()}>Boolean</button>
-      <button type="submit" onClick={() => handleSubmit()}>Submit</button>
+    <div>
+      App
     </div>
-  )
+  );
 }
 
 export default App;
